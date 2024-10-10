@@ -4,34 +4,802 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" type="x-icon" href="images/logo/logo_2-removebg-preview.png">
+    <title>One Place</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="messagebtn.css">
+    <script src="https://kit.fontawesome.com/92d5a0c82a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/92d5a0c82a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+
 </head>
 
 <body>
-    <div class="msg-container hide">
-        <p id="message">Winner</p>
-    </div>
-    <main>
-        <h1>Tic Tac Toe</h1>
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
+
+    <div id="message-button">
+        <img src="icons/chat-dots.png" alt="Message me">
+      </div>
+    
+      
+      <div id="chatbox-modal" class="chatbox-modal">
+        <div class="chatbox-header">
+          <span>Chat with us</span>
+          <span id="close-chatbox" class="close">&times;</span>
+        </div>
+        <div class="chatbox-body">
+          <p>Welcome! How can we help you?</p>
+          <!-- You can add more chat UI elements here -->
+        </div>
+      </div>
+      
+
+
+
+<!-- ===================================================== -->
+    <!-- -----------loader----------- -->
+    <div id="loader"><img src="css-loader2.gif" alt=""></div>
+    <!-- ---------notification section-------------- -->
+
+    <header id="notification-section">
+        <h1><span id="element"></span></h1>
+    </header>
+
+    <!-- ---------------logo------------- -->
+
+    <nav class="navbar">
+        <h1 class="logo-text">One Place</h1>
+    </nav>
+
+
+
+    <!-- -------------section-1------------------- -->
+    <div class="section-1">
+        <div class="navigation-items">
+            <img src="images/logo/logo_2-removebg-preview.png" alt="Logo" class="one-place-logo">
+            <ul class="nav-items">
+                <li><a href="#main-section-image-text">Home</a></li>
+                <li><a href="#" style="margin-right: 5px;">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li id="pp"><a href="#">Privacy & Policy</a></li>
+            </ul>
+            <div class="side-items">
+                <a href="#" id="login-btn"> <i class="fa-solid fa-circle-user"></i>Log in</a>
+                <a href="#" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
             </div>
         </div>
-        <button id="reset-btn">Reset Button</button>
-        <button id="new-btn">New Game</button>
-    </main>
 
+
+
+        <!-- ---------------------main section----------- -->
+        <div class="main-section-image-text">
+            <div class="main-col-1">
+                <div class="main-heading">
+                    <h1>
+                        Service At<br> <span style="display: inline-block; padding: 0 72px;">Your</span><br> Doorstep
+                    </h1><br>
+                    <p id="main-col-para">Your Comfort Is Our First Priority </p>
+                    <!-- The Modal Trigger -->
+                    <button id="Book-A-Professional">Book A Professional</button>
+
+
+                </div>
+            </div>
+            <div class="main-col-2"></div>
+        </div>
+    </div>
+
+    <!-- ----------nav for small screen----------- -->
+    <!-- nav section for smaller divices--------- -->
+
+
+    <div class="nav-items-for-small-screenn">
+        <ul class="nav-items-for-small-screen">
+            <li><a href="#"><i class="fa-solid fa-person-dress"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-wrench"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+
+        </ul>
+    </div>
+
+
+    <!-- ------------------Section 2--------------- -->
+
+    <div class="container-col-1">
+        <div class="content">
+            <div class="featured-images">
+                <img src="images/amin image.jpeg" alt="Image">
+            </div>
+
+            <div class="container-col-2">
+                <h2>Home services at your <br> doorstep</h2>
+                <div class="item-container">
+                    <span id="item-container-2nd-text">What are you lookig for?</span>
+                    <div class="main-service-icons-links">
+                        <div class="big-cards">
+                            <div class="ser-card " id="womem-saloon-spa-modal">
+                                <a>
+                                    <div class="ser-card-images">
+                                        <img src="icons/women saloon.png" alt="Women's Saloon & Spa">
+                                    </div>
+                                    <p>Women's Saloon & Spa</p>
+                                </a>
+                            </div>
+
+                            <div class="ser-card" id="mens-salon-modal">
+                                <a>
+                                    <div class="ser-card-images"><img src="icons/men sal.png" alt=""></div>
+                                    <p>Men's Saloon</p>
+                                </a>
+                            </div>
+                            <div class="ser-card" id="ac-repair-modal">
+                                <a>
+                                    <div class="ser-card-images"><img src="icons/ac repair.jpeg" alt=""></div>
+                                    <p>AC & applinces repair</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="small-cards">
+                            <div class="partion1">
+
+                                <div class="ser-2-card" id="painter-modal">
+                                    <a>
+                                        <div class="ser-2-card-images">
+                                            <p>Painting & <br>Waterproofing</p><img src="icons/painter.png" alt=""
+                                                style="height: 55px;width: 55px; margin-left: 10px;"
+                                                class="ser-2-card-images-hover">
+
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="ser-2-card" id="electrician-modal">
+                                    <a>
+                                        <div class="ser-2-card-images">
+                                            <p>Electrician, Plumber & <br>Carpenter</p><img src="icons/repair.png"
+                                                alt="Electrician, Plumber &Carpenter"
+                                                style="height: 55px;width: 55px; margin-left: 10px;"
+                                                class="ser-2-card-images-hover">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="partion2">
+                                <div class="ser-2-card" id="waterpurifier-modal">
+                                    <a href="#">
+                                        <div class="ser-2-card-images">
+                                            <p>Water Purifier</p><img src="icons/ro.png" alt="Water Purifier"
+                                                style="height: 55px;width: 55px; margin-left: 10px;"
+                                                class="ser-2-card-images-hover">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------section-3--------------------->
+    <div class="card-section">
+        <h1 class="subtitel" style="text-align: center; ">Girls Section</h1>
+        <div class="card-swiping-box">
+            <div class="container swiper">
+                <h1 class="subtitel">Saloon For Girls</h1>
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">facial and cleanup</h2>
+                            <img src="images/women saloon image/hair care.jpeg" alt="facial and cleanup"
+                                class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">facial and cleanup</h2>
+                            <img src="images/women saloon image/facial and cleanup.jpeg" alt="facial and cleanup"
+                                class="user-image">
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">bleach and detan</h2>
+                            <img src="images/women saloon image/bleach and detan.jpeg" alt="bleach and detan"
+                                class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Threading & Face axing</h2>
+                            <img src="images/women saloon image/eye brow.jpeg" alt="BG Image" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Manicure</h2>
+                            <img src="images/women saloon image/manicure.jpeg" alt="BG Image" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Pedicuree</h2>
+                            <img src="images/women saloon image/pedicuree.jpeg" alt="BG Image" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Waxing</h2>
+                            <img src="images/women saloon image/waxing.jpeg" alt="BG Image" class="user-image">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------section-3 part-2--------------------->
+    <div class="card-section-part-2">
+        <div class="card-swiping-box">
+            <div class="container swiper">
+                <h1 class="subtitel" id="spa-for-girls-heading">Spa For Girls</h1>
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Stress relief</h2>
+                            <img src="images/stress/stress.jpeg" alt="facial and cleanup" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Pain relief</h2>
+                            <img src="images/stress/pain.jpeg" alt="facial and cleanup" class="user-image">
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Natural Skincare</h2>
+                            <img src="images/stress/skin.jpeg" alt="bleach and detan" class="user-image">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------section-4------------- -->
+
+    <div class="card-section-4">
+        <h1 class="subtitel" style="text-align: center; ">Men's Section</h1>
+        <div class="card-swiping-box">
+            <div class="container swiper">
+                <h1 class="subtitel">Saloon For Mens</h1>
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Hair cut & Bread <br> Grooming Shaving</h2>
+                            <img src="images/mens saloon/hair cut.jpeg" alt="hair cut" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Pedicuree & Manicure</h2>
+                            <img src="images/mens saloon/manicure & pedicuree.jpeg" alt="manicure & pedicuree"
+                                class="user-image">
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Hair Colour & Spa</h2>
+                            <img src="images/mens saloon/hair color & hair spa.jpeg" alt="hair color & hair spa"
+                                class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Facial & Cleanup</h2>
+                            <img src="images/mens saloon/facial cleanup.jpeg" alt="Facial & Cleanup" class="user-image">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------section-4 part-2--------------------->
+    <div class="card-section-part-2">
+        <div class="card-swiping-box">
+            <div class="container swiper">
+                <h1 class="subtitel" id="spa-for-girls-heading">Spa For Men's</h1>
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Stress relief</h2>
+                            <img src="images/mens stress/stress.jpeg" alt="stress" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Pain relief</h2>
+                            <img src="images/mens stress/pain.jpeg" alt="Pain relief" class="user-image">
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Post Workout</h2>
+                            <img src="images/mens stress/post worlout.jpeg" alt="post workout" class="user-image">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------------------section-5--------------------- -->
+
+
+    <div class="card-section-5">
+        <!-- <h1 class="subtitel" style="text-align: center; ">Men's Section</h1> -->
+        <div class="card-swiping-box">
+            <div class="container swiper">
+                <h1 class="subtitel">AC & Applinces Repair</h1>
+                <div class="slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">AC Repair & Service</h2>
+                            <img src="images/repairing/ac.jpeg" alt="AC Repair & Service" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Washing Machine Repair</h2>
+                            <img src="images/repairing/washing machine.jpeg" alt="washing machine" class="user-image">
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Water purifier Repir</h2>
+                            <img src="images/repairing/water purifier.jpeg" alt="Water purifier Repir"
+                                class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Chimeny Repair & service</h2>
+                            <img src="images/repairing/chimny.jpeg" alt="Chimeny Repair & service" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Telivision Repair</h2>
+                            <img src="images/repairing/tv.jpeg" alt="Telivision Repair" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Refrigrator Repair & service</h2>
+                            <img src="images/repairing/fridge.jpeg" alt="Refrigrator Repair & service"
+                                class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Gyser Repair & service</h2>
+                            <img src="images/repairing/gyser.jpeg" alt="Gyser Repair & service" class="user-image">
+                        </div>
+                        <div class="card-item swiper-slide">
+                            <h2 class="user-name">Microwave Repair & service</h2>
+                            <img src="images/repairing/microwave.jpeg" alt="Microwave Repair & service"
+                                class="user-image">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------section-6--------------- -->
+    <div class="card-section-6">
+        <div class="slide-container swiper">
+            <h1 class="subtitel">Quick Home Repairs</h1>
+            <div class="slide-content slider-wrapper">
+                <div class=" swiper-wrapper">
+
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/fan and exasut.jpeg" alt="fan and exasut" class="cardd-imgg">
+                            </div>
+                            <p id="names">Fan repair(celling/exhaust/wall) <br>₹199</p>
+                        </div>
+                    </div>
+
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/frsm.jpeg" alt="Drill & Hang(wall decor)" class="cardd-imgg">
+                            </div>
+                            <p id="names">Drill & Hang(wall decor) <br>₹129</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/minor door repair.jpeg" alt="minor door repair"
+                                    class="cardd-imgg">
+                            </div>
+                            <p id="names">Minor wooden door repair <br>₹199</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/cupboard hing repair and installatiobn.jpeg"
+                                    alt="cupboard hing repair and installation" class="cardd-imgg">
+                            </div>
+                            <p id="names">cupboard hing installation <br>₹199</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/switch board.jpeg" alt="switch board" class="cardd-imgg">
+                            </div>
+                            <p id="names">Switch/Socket Replacement <br>₹109</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/door lock repair.jpeg" alt="door lock repair"
+                                    class="cardd-imgg">
+                            </div>
+                            <p id="names">Door lock repair <br>₹259</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/drawer chennal repair.jpeg" alt="chennal repair"
+                                    class="cardd-imgg">
+                                <p id="names">Channel repair(One set) <br>₹178</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/switch board.jpeg" alt="switch board" class="cardd-imgg">
+                            </div>
+                            <p id="names">Switchboard/switchbox repair <br>₹120</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/wifi cctv installation.jpeg" alt="wifi cctv installation"
+                                    class="cardd-imgg">
+                            </div>
+                            <p id="names">WIFI CCTV installation <br>₹299</p>
+                        </div>
+                    </div>
+                    <div class="cardd swiper-slide">
+                        <div class="image-content">
+                            <div class="cardd-image">
+                                <img src="images/repair/curtain rod installation.jpeg" alt="curtain rod installation"
+                                    class="cardd-imgg">
+                            </div>
+                            <p id="names">curtain rod installation (2 brackets) <br>₹199</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+    <!-- ----------modal section------------ -->
+
+
+    <!--  Modal for book a professnal button -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>What are you looking for?</h2>
+            <!-- <h3>Appliance repair & service</h3> -->
+            <div class="services-grid">
+
+                <div class="service-item">
+                    <a href="https://chatgpt.com/?model=">
+                        <img src="icons/women saloon.png" alt="Men's & Women's Grooming"><br> Men's & Women's Grooming
+                    </a>
+                </div>
+
+                <div class="service-item">
+                    <a href="#">
+                        <img src="icons/air-conditioner_16942171.png" alt="Applinces repair and service"><br> Applinces
+                        repair & service
+                    </a>
+                </div>
+
+                <div class="service-item">
+                    <a href="#">
+                        <img src="icons/repair.png" alt="Quick home repair "><br> Quick home repair
+                    </a>
+                </div>
+
+                <div class="service-item">
+                    <a href="#">
+                        <img src="icons/assistance_4310114.png" alt="Spa & message "><br> Spa &
+                        message
+                    </a>
+                </div>
+                <!-- Add more service items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------- womens saloon icon modal----------------- -->
+
+
+    <!-- Modal for the Women's Salon & Spa icon -->
+    <div id="modal-for-women-spa-saloon-icon" class="modal-for-women-spa-saloon-icon">
+        <div class="modal-content-1">
+            <span class="close-modal-for-women-spa-saloon-icon">&times;</span>
+            <h2>Women's Salon & Spa</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/makeup 2.png" alt="Saloon for women"><br>
+                        Saloon for women
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/spa message for women.png" alt="Spa for women"><br>
+                        Spa for women
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/hair studio women.png" alt="hair studio women"><br>
+                        hair studio women
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/mnakeup and styling studio.png" alt="makeup and styling studio"><br>
+                        Makeup & Styling studio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Men's Salon -->
+    <div id="modal-for-mens-salon" class="modal">
+        <div class="modal-content  formens">
+            <span class="close-modal-mens">&times;</span>
+            <h2>Men's Salon Services</h2>
+            <!-- Content here -->
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/men sal.png" alt="Saloon for mens"><br>
+                        Saloon for kids & mens
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/spa fpor mens.png" alt="Spa for mens"><br>
+                        Spa for mens
+                    </a>
+                </div>
+                <!-- Content here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for AC Repair -->
+    <div id="modal-for-ac-repair" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-ac">&times;</span>
+            <h2>Appliance repair & <br> service</h2>
+            <!-- Content here -->
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/ac.jpeg" alt=" AC repair & service"><br>
+                        AC repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/cooler.png" alt=" Air coller repair & service"><br>
+                        Air coller repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/chimeny.png" alt="Chemney repair & service"><br>
+                        Chemney repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/gyser repair.jpeg" alt="Gyser repair & service"><br>
+                        Gyser repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/inverter repair.png" alt="inverter repair & service"><br>
+                        inverter repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/ro.png" alt=" Water purifier repair & service"><br>
+                        Water purifier repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/laptop.png" alt="Laptop repair & service"><br>
+                        Laptop repair & service
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/microwave.jpeg" alt=" Microwave repair"><br>
+                        Microwave repair
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/mixer grinder.png" alt="Mixer grinder repair"><br>
+                        Mixer grinder repair
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/fridge.jpeg" alt="Refrigrator repair"><br>
+                        Refrigrator repair
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/tv.jpeg" alt="TV repair"><br>
+                        TV repair
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/washing machine.jpeg" alt="Washing machine repair"><br>
+                        Washing machine repair
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------for painting and waterproffing modal-------- -->
+
+    <div id="modal-for-waterproofing" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-waterproofing">&times;</span>
+            <h2>Painting & Waterproofing</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/full house painting.png" alt="Full home painting"><br>
+                        Full home painting
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/rooms wall painting.jpeg" alt="Spa for mens"><br>
+                        Room/ Wall painting
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------for electrician plumber carpenter modal-------- -->
+
+    <div id="modal-for-electrician" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-electrician">&times;</span>
+            <h2>Electrician, Plumber & Carpenter</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/electrician.png" alt="Electrician"><br>
+                        Electrician
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/plumber.png" alt="electrician"><br>
+                        Plumber
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/carpenter.jpeg" alt="Carpenter"><br>
+                        Carpenter
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/fan installation.png" alt="fan installation"><br>
+                        Fan installation
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="#">
+                        <img src="secondary icons/furniture.jpeg" alt="furniture"><br>
+                        Furniture assembly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -------------Footer---------------- -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="company-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Anti-discrimination policy</a></li>
+                    <li><a href="#">OP impact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="customers-section">
+                <h3>For customers</h3>
+                <ul>
+                    <li><a href="#">OP reviews</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="partners-section">
+                <h3>For partners</h3>
+                <ul>
+                    <li><a href="#">Register as a professional</a></li>
+                </ul>
+            </div>
+            <div class="social-links-section">
+                <h3>Social links</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="app-links">
+                    <a href="#"><img src="images/app store.png" alt="App Store"></a>
+                    <a href="#"><img src="images/play store.png" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2024 One Place. All rights reserved. | CIN: O74140DL2024PTC274413</p>
+        </div>
+    </footer>
+    <!-- image slider js  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="imageswiper.js"></script>
+    <script src="imageslider2.js"></script>
+
+    <!-- typed js file -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="anouncement.js"></script>
+
+    <!-- normal js files -->
+    <script src="responsive.js"></script>
+    <script src="modal.js"></script>
+    <script src="loader.js"></script>
     <script src="script.js"></script>
+    </div>
 </body>
 
 </html>

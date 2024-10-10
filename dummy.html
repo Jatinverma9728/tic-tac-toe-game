@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imageslider.css">
+</head>
+<body>
+    <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <img src="images/1.jpg" alt="BG Image" class="user-image">
+                <h2 class="user-name">Tic Tac Toe</h2>
+                <p class="user-profession">
+                <div class="read-more-container">
+                    <!-- Card 1 -->
+                    <div class="paracontainer">
+                        <p>I developed a classic Tic Tac Toe game using HTML, CSS, and JavaScript. This game
+                            allows two players to take
+                            <span class="read-more-text">
+                                turns marking their symbols (X or O) on a 3x3 grid. The objective is to be the
+                                first player to align three of their symbols vertically, horizontally, or
+                                diagonally.
+                            </span>
+                        </p>
+                        <span class="read-more-btn">Read More...</span>
+                    </div>
+                    <button class="message-button"><a href="https://jatinverma9728.github.io/tic-tac-toe-game/"
+                            style="text-decoration: none; color: #030728;" target="_blank">View</a></button>
+                </div>
+
+            </div>
+
+            <div class="card-item swiper-slide">
+                <img src="images/car mechnaic 2.jpg" alt="BG Image" class="user-image">
+                <h2 class="user-name">Rock, Paper, Scissors</h2>
+                <p class="user-profession"> <!-- Card 2 -->
+                <div class="paracontainer">
+                    <p>This is a simple yet engaging Rock, Paper, Scissors game built using HTML, CSS, and
+                        JavaScript. In this game
+                        <span class="read-more-text">
+                            , players choose one of three options: rock, paper, or scissors. The computer also
+                            randomly selects one of these options. The game then compares the player's choice
+                            with the computer's choice to determine the winner based on the classic rules
+                        </span>
+                    </p>
+                    <span class="read-more-btn">Read More...</span>
+                </div>
+                </p>
+                <button class="message-button"><a href="https://jatinverma9728.github.io/rock-papeer-sicorrs/"
+                        style="text-decoration: none; color: #030728;" target="_blank">View</a></button>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/cctv 1.jpg" alt="BG Image" class="user-image">
+                <h2 class="user-name">Under Maintance</h2>
+                <p class="user-profession"> <!-- Card 3 -->
+                <div class="paracontainer">
+                    <p>Short description for card 2.
+                        <span class="read-more-text" style="color: aqua;">
+                            Additional content for card 2 that is hidden initially.
+                        </span>
+                    </p>
+                    <span class="read-more-btn">Read More...</span>
+                </div>
+                </p>
+                <button class="message-button">View</button>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/car mechnaic.jpg" alt="BG Image" class="user-image">
+                <h2 class="user-name">Under Maintance</h2>
+                <p class="user-profession"> <!-- Card 2 -->
+                <div class="paracontainer">
+                    <p>Short description for card 2.
+                        <span class="read-more-text">
+                            Additional content for card 2 that is hidden initially.
+                        </span>
+                    </p>
+                    <span class="read-more-btn">Read More...</span>
+                </div>
+                </p>
+                <button class="message-button">View</button>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper(".slider-wrapper", {
+        // loop: true,
+        grabCursor: true,
+        spaceBetween: 30,
+      
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+      
+      </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Responsive Breakpoints */
+
+/* Small devices (phones, up to 480px) */
+
+@media (max-width: 480px) {
+  body {
+    flex-grow: 1;
+  }
+  #loader {
+    max-width: 480px;
+    height: 100%;
+    background: #000;
+    /* transform: scale(0.2); */
+  }
+  #loader img {
+    height: 480px !important;
+    /* width: 50%; */
+    transform: scale(0.5);
+  }
+  #notification-section {
+    font-size: 1vw; /* Font size for mobile devices */
+  }
+
+  .section-1 {
+    display: none;
+  }
+  .content {
+    display: inline;
+  }
+  .featured-images {
+    display: none;
+  }
+  .item-container {
+    margin-top: 0px;
+  }
+  .container-col-1{
+    display: block;
+  }
+  .container-col-2 {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+  }
+  .container-col-2 h2 {
+    display: none;
+  }
+  .item-container {
+    height: 420px;
+    width: 95vw;
+  }
+  .ser-card-images {
+    width: 110px;
+  }
+
+  .ser-card p {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .card-section{
+    /* border: 2px solid red; */
+    margin-top: -250px;
+    transform: scale(0.9);
+  }
+  .card-section-part-2{
+    margin-left: 20px;
+    /* width: 400px; */
+  }
+  .card-section-5{
+    margin-left: 20px;
+  }
+  .card-section-6{
+    margin-left: 20px;
+  }
+  footer{
+    /* border: 2px solid green; */
+    height: 99%;
+  }
+  #message-button{
+    top: 700px;
+    left: 350px !important;
+  }
+  #chatbox-modal{
+    z-index: 10;
+    /* border: 2px solid red; */
+  }
+
+/* ---------modal section------- */
+
+.modal-content-1{
+  border: 1px solid rgb(49, 49, 49);
+  width: 400px;
+}
+.modal-content{
+  width: 400px;
+}
+#waterpurifier-modal{
+  width: 170px;
+}
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  #notification-section h1 span {
+    font-size: 3vw; /* Font size for tablets and smaller */
+  }
+
+  .section-1 {
+    display: none;
+  }
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+  .slider-wrapper .swiper-slide-button {
+    display: none;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-links-section,
+  .app-links img {
+    margin-top: 20px;
+  }
+
+}

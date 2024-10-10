@@ -1,0 +1,11 @@
+#loader {
+    width: 100%;
+    background: black;
+    position: fixed;
+    z-index: 100;
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
